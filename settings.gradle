@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Convenience Module"
+include ':app'
+include ':convenience'
+project(':convenience').projectDir = new File("..${File.separator}${rootProject.projectDir.name}${File.separator}convenience")
